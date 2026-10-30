@@ -2,7 +2,7 @@
 
 Static pages for the Beast Pit Play Store listing: a landing page and the privacy policy.
 
-- `index.html`: landing page
+- `index.html`: landing page (`style.css`, `img/` and `fonts/` are built by `python3 -I tools/build_site_art.py ../beast-pit-site` in the game repo). When the trailer is on YouTube, point the `.video` link in `index.html` at it and delete the "LAUNCHING SOON" label
 - `privacy.html`: privacy policy (paste its public URL, e.g. `https://<user>.github.io/<repo>/privacy.html`, into the Play Console)
 
 Keep `privacy.html` in sync with `docs/PRIVACY_POLICY.md` in the game repo.

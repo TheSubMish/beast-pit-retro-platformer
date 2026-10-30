@@ -1,10 +1,108 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Beast Pit: Retro Platformer</title>
-<meta name="description" content="Beast Pit is a retro 1-bit pixel platformer with double jump, boss fights and an endless mode. Works offline.">
-<style>:root{--bg:#222323;--fg:#f0f6f0}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}main{max-width:40rem;margin:0 auto;padding:2rem 1rem}img{max-width:100%;image-rendering:pixelated}a{color:var(--fg)}h1{font-size:1.6rem}</style></head><body><main>
-<img src="img/feature.png" alt="Beast Pit: Retro Platformer">
-<h1>Beast Pit: Retro Platformer</h1>
-<p>You fell into the Beast Pit. Run, jump, double jump and slash through 4 worlds, beat 4 bosses and climb out. Works offline, no account, no ads.</p>
-<p><a href="privacy.html">Privacy policy</a> · Contact: <a href="mailto:subodhmishra015@gmail.com">subodhmishra015@gmail.com</a></p>
-</main></body></html>
+<meta name="description" content="Beast Pit is a retro 1-bit pixel platformer: double jump, slash beasts, fight giant bosses and climb out of the pit. Works offline.">
+<meta property="og:title" content="Beast Pit: Retro Platformer">
+<meta property="og:description" content="You fell into the Beast Pit. Double jump, slash and climb out.">
+<meta property="og:image" content="img/feature.png">
+<link rel="icon" href="img/icon.png">
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="img/icon.png" alt="">BEAST PIT</a>
+  <nav><a href="#trailer">TRAILER</a><a href="#screens">SCREENS</a><a href="#features">FEATURES</a><a href="#beasts">BEASTS</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <div class="moon" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker">A RETRO PIXEL PLATFORMER</p>
+    <h1>BEAST<span>PIT</span></h1>
+    <p class="lede">You fell into the pit. The crowd roars above, the beasts wait below, and the only way out is up. Double jump, slash and climb out.</p>
+    <div class="cta">
+      <a class="btn" href="#trailer">WATCH TRAILER</a>
+      <a class="btn red" href="#screens">SEE THE GAME</a>
+      <span class="btn ghost" aria-disabled="true">GOOGLE PLAY: SOON</span>
+    </div>
+  </div>
+  <div class="actors" aria-hidden="true">
+    <img class="a-hero" src="img/hero.png" alt="">
+    <img class="a-coin" src="img/coin.png" alt="" style="left:21%">
+    <img class="a-coin" src="img/coin.png" alt="" style="left:27%;animation-delay:.4s">
+    <img class="a-spikes" src="img/spikes.png" alt="" style="left:44%">
+    <img class="a-boar" src="img/boss_boar.png" alt="">
+  </div>
+  <div class="ground" aria-hidden="true"></div>
+</div>
+
+<section id="trailer"><div class="wrap">
+  <h2 class="sec-title">THE <em>TRAILER</em></h2>
+  <p class="sec-sub">Forty-nine seconds in the pit.</p>
+  <!-- When the trailer is on YouTube, set this link to the video URL and delete the .soon label. -->
+  <a class="video" href="#trailer" aria-label="Trailer (coming soon)">
+    <img src="img/trailer-thumb.png" alt="Beast Pit official trailer">
+    <span class="play"><b></b></span>
+    <span class="soon">LAUNCHING SOON</span>
+  </a>
+</div></section>
+
+<section id="screens" class="alt"><div class="wrap">
+  <h2 class="sec-title">IN THE <em>PIT</em></h2>
+  <p class="sec-sub">Four worlds, each with its own look, and a boss waiting at the end of every one.</p>
+  <div class="shots">
+    <a href="img/shot1.png"><img src="img/shot1.png" alt="World 1: the Kennels" loading="lazy"></a>
+    <a href="img/shot2.png"><img src="img/shot2.png" alt="World 2: icy caves" loading="lazy"></a>
+    <a href="img/shot3.png"><img src="img/shot3.png" alt="World 3: the ruins" loading="lazy"></a>
+    <a href="img/shot4.png"><img src="img/shot4.png" alt="Boss fight: the Giant Boar" loading="lazy"></a>
+    <a href="img/shot5.png"><img src="img/shot5.png" alt="Boss fight in the crypt" loading="lazy"></a>
+    <a href="img/shot6.png"><img src="img/shot6.png" alt="World map" loading="lazy"></a>
+  </div>
+</div></section>
+
+<section id="features"><div class="wrap">
+  <h2 class="sec-title">HOW IT <em>PLAYS</em></h2>
+  <p class="sec-sub">Quick runs, fair deaths, and one more try every time.</p>
+  <div class="grid">
+    <div class="panel"><img class="ico" src="img/hero.png" alt=""><h3>JUMP, DOUBLE JUMP, SLASH</h3><p>Tight, fair controls. Stomp on enemies or cut them down with your sword.</p></div>
+    <div class="panel"><img class="ico" src="img/boss_boar.png" alt=""><h3>GIANT BOSSES</h3><p>Every world ends with a boss that has its own tricks. Read its moves and find your opening.</p></div>
+    <div class="panel"><img class="ico" src="img/saw.png" alt=""><h3>20 HAND-MADE LEVELS</h3><p>A world map, stars to earn, and traps in every corner: saws, darts, spikes and crumbling floors.</p></div>
+    <div class="panel"><img class="ico" src="img/bat.png" alt=""><h3>ENDLESS MODE</h3><p>A new pit every run, plus a daily seed so you can compare scores.</p></div>
+    <div class="panel"><img class="ico" src="img/coin.png" alt=""><h3>INSTANT RETRY</h3><p>No lives to lose. Die, restart, learn the level and go again.</p></div>
+    <div class="panel"><img class="ico" src="img/icon.png" alt=""><h3>MADE FOR TOUCH</h3><p>On-screen controls for phones and tablets. Keyboard and gamepad work too. Plays offline.</p></div>
+  </div>
+</div></section>
+
+<section id="beasts" class="alt"><div class="wrap">
+  <h2 class="sec-title">KNOW YOUR <em>THREATS</em></h2>
+  <p class="sec-sub">Colours tell you what hit you. Learn them and you will read the pit at a glance.</p>
+  <div class="threats">
+    <div class="panel threat" style="--c:var(--red)"><h3>BEASTS</h3>
+      <div class="row"><img src="img/rat.png" alt=""><img src="img/snake.png" alt=""><img src="img/boar.png" alt=""><img src="img/bat.png" alt=""></div>
+      <p>Red. They walk, charge, swoop and drop. Stomp them or slash them.</p></div>
+    <div class="panel threat" style="--c:var(--orange)"><h3>TRAPS</h3>
+      <div class="row"><img src="img/saw.png" alt=""><img src="img/spikes.png" alt=""></div>
+      <p>Orange. Saws, spikes and falling blocks stay put or follow a rail. Time your jump.</p></div>
+    <div class="panel threat" style="--c:var(--magenta)"><h3>BULLETS</h3>
+      <div class="row"><img src="img/dart.png" alt=""><img src="img/shot.png" alt=""></div>
+      <p>Magenta. Darts and boss shots fly at you. Jump them or duck behind cover.</p></div>
+    <div class="panel threat" style="--c:var(--yellow)"><h3>COINS</h3>
+      <div class="row"><img src="img/coin.png" alt=""></div>
+      <p>Yellow. Grab them for stars and score.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="text-align:center">
+  <h2 class="sec-title">THINK YOU CAN <em>CLIMB OUT?</em></h2>
+  <p class="sec-sub" style="margin-inline:auto">Beast Pit is coming to Google Play and your browser.</p>
+  <div class="cta" style="justify-content:center"><a class="btn" href="#trailer">WATCH THE TRAILER</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div><h4>BEAST PIT</h4><p>A retro pixel platformer by TheSubMish.</p><p>Contact: <a href="mailto:subodhmishra015@gmail.com">subodhmishra015@gmail.com</a></p></div>
+  <div><h4>LEGAL</h4><p><a href="privacy.html">Privacy policy</a></p></div>
+  <div><h4>CREDITS</h4><p>Art base: Kenney 1-Bit Platformer Pack (CC0)</p><p>Font: Press Start 2P (SIL OFL)</p><p>Made with Godot Engine</p></div>
+</div></footer>
+</body></html>

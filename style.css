@@ -1,0 +1,99 @@
+@font-face{font-family:"Press Start 2P";src:url("fonts/PressStart2P-Regular.ttf") format("truetype");font-display:swap}
+:root{--bg:#17121a;--bg2:#221821;--panel:#241c26;--fg:#f0f6f0;--dim:#b9b2bd;--red:#ff5c57;--orange:#ff9933;--magenta:#ff4dd9;--yellow:#ffe65a;--sand:#f0e2c4;--px:4px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%;image-rendering:pixelated;display:block}
+a{color:var(--yellow)}
+h1,h2,h3,.px{font-family:"Press Start 2P",monospace;font-weight:400;line-height:1.35}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:rgba(23,18,26,.92);backdrop-filter:blur(4px);border-bottom:var(--px) solid #000}
+.nav .wrap{display:flex;align-items:center;gap:1.25rem;height:3.5rem}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--fg);text-decoration:none;font:14px "Press Start 2P",monospace}
+.brand img{width:32px;height:32px}
+.nav nav{margin-left:auto;display:flex;gap:1.25rem}
+.nav nav a{color:var(--dim);text-decoration:none;font:11px "Press Start 2P",monospace}
+.nav nav a:hover{color:var(--yellow)}
+@media(max-width:620px){.nav nav a:nth-child(n+3){display:none}}
+
+/* buttons */
+.btn{display:inline-block;padding:.95rem 1.4rem;font:13px "Press Start 2P",monospace;color:#17121a;background:var(--yellow);text-decoration:none;border:var(--px) solid #000;box-shadow:var(--px) var(--px) 0 #000;transition:transform .08s,box-shadow .08s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.btn.red{background:var(--red)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--fg);box-shadow:none}
+.btn[aria-disabled=true]{opacity:.55;pointer-events:none}
+.cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 3.5rem);display:flex;align-items:center;overflow:hidden;
+ background:radial-gradient(ellipse at 80% 20%,rgba(255,92,87,.18),transparent 55%),linear-gradient(#17121a 0%,#2b1a20 70%,#3a1f22 100%)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.7;
+ background-image:radial-gradient(2px 2px at 12% 20%,#fff,transparent),radial-gradient(2px 2px at 30% 55%,#fff8,transparent),radial-gradient(2px 2px at 55% 12%,#fff,transparent),radial-gradient(2px 2px at 72% 40%,#fff8,transparent),radial-gradient(2px 2px at 90% 15%,#fff,transparent),radial-gradient(2px 2px at 42% 30%,#fff6,transparent)}
+.moon{position:absolute;right:9%;top:9%;width:7rem;height:7rem;border-radius:50%;background:var(--fg);box-shadow:inset -1.7rem .6rem 0 #2a1a20,0 0 3rem rgba(240,246,240,.25)}
+.hero .wrap{position:relative;z-index:2;padding-top:3rem;padding-bottom:12rem}
+.kicker{color:var(--red);font:12px "Press Start 2P",monospace;margin:0 0 1.2rem;letter-spacing:.05em}
+.hero h1{margin:0;font-size:clamp(2.2rem,9vw,6rem);text-shadow:var(--px) var(--px) 0 #000,calc(var(--px)*2) calc(var(--px)*2) 0 #000}
+.hero h1 span{color:var(--red);display:block}
+.lede{max-width:34rem;margin:1.5rem 0 0;font-size:1.15rem;color:#e6dfe9}
+.ground{position:absolute;left:0;right:0;bottom:0;height:5.5rem;background:var(--sand);z-index:1;border-top:1rem solid var(--sand)}
+.ground:before{content:"";position:absolute;left:0;right:0;top:-1rem;height:1rem;background:repeating-linear-gradient(90deg,transparent 0 1.5rem,#17121a 1.5rem 3rem)}
+.actors{position:absolute;left:0;right:0;bottom:5.5rem;z-index:2;pointer-events:none}
+.actors img{position:absolute;bottom:0}
+.a-hero{left:6%;width:clamp(4.5rem,9vw,8rem)}
+.a-coin{width:2.6rem;bottom:5rem!important;animation:bob 1.6s steps(4) infinite}
+.a-spikes{width:clamp(4rem,7vw,6rem)}
+.a-boar{right:5%;width:clamp(11rem,26vw,25rem);animation:breath 1.2s steps(2) infinite}
+@keyframes bob{50%{transform:translateY(-.6rem)}}
+@keyframes breath{50%{transform:translateY(.5rem)}}
+@media(max-width:760px){.a-boar{right:-6%;opacity:.55}.hero .wrap{padding-bottom:10rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+
+/* sections */
+section{padding:5rem 0;scroll-margin-top:3.5rem}
+section.alt{background:var(--bg2);border-block:var(--px) solid #000}
+.sec-title{font-size:clamp(1.1rem,3.4vw,1.7rem);margin:0 0 .6rem}
+.sec-title em{font-style:normal;color:var(--red)}
+.sec-sub{color:var(--dim);margin:0 0 2.5rem;max-width:40rem}
+.panel{background:var(--panel);border:var(--px) solid #000;box-shadow:var(--px) var(--px) 0 #000;padding:1.4rem}
+
+/* trailer */
+.video{position:relative;display:block;max-width:56rem;margin:0 auto;border:var(--px) solid #000;box-shadow:8px 8px 0 #000}
+.video img{width:100%;image-rendering:auto}
+.video .play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35)}
+.video .play b{display:grid;place-items:center;width:5rem;height:5rem;background:var(--red);border:var(--px) solid #000;box-shadow:var(--px) var(--px) 0 #000;font:0/0 a}
+.video .play b:after{content:"";border-left:1.6rem solid #fff;border-block:1rem solid transparent;margin-left:.4rem}
+.video .soon{position:absolute;left:1rem;bottom:1rem;background:#000;color:var(--yellow);padding:.5rem .8rem;font:11px "Press Start 2P",monospace}
+
+/* gallery */
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1.4rem}
+.shots a{display:block;border:var(--px) solid #000;box-shadow:var(--px) var(--px) 0 #000;background:#000;transition:transform .12s}
+.shots a:hover{transform:translateY(-4px)}
+.shots img{width:100%;aspect-ratio:2046/1080;object-fit:cover;image-rendering:pixelated}
+
+/* features */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.4rem}
+.grid h3{font-size:.8rem;margin:.9rem 0 .5rem;color:var(--yellow)}
+.grid p{margin:0;color:#ddd6e0;font-size:.98rem}
+.grid .ico{height:3.6rem;width:auto}
+
+/* threat guide */
+.threats{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.4rem}
+.threat{border-top:.5rem solid var(--c)}
+.threat h3{color:var(--c);font-size:.85rem;margin:0 0 .5rem}
+.threat .row{display:flex;gap:.7rem;margin:.8rem 0}
+.threat .row img{height:3rem;width:auto}
+.threat p{margin:0;font-size:.95rem;color:#ddd6e0}
+
+/* footer */
+footer{padding:3rem 0 4rem;border-top:var(--px) solid #000;background:#100c13;color:var(--dim);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+footer h4{font:11px "Press Start 2P",monospace;color:var(--fg);margin:0 0 .8rem}
+footer a{color:var(--dim)}footer a:hover{color:var(--yellow)}
+footer p{margin:.3rem 0}
+
+/* plain pages (privacy) */
+.doc{max-width:44rem;margin:0 auto;padding:3rem 1.25rem 5rem}
+.doc h1{font-size:clamp(1.1rem,4vw,1.6rem);margin:0 0 1rem}
+.doc p{color:#e6dfe9}
